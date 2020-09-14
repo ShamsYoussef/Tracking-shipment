@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/bootstrap';
+@import '../src/styles/styles.scss';
+
+.App {
+  text-align: center;
+}
+
+* {
+  font-family: $app-font-family;
+
+}

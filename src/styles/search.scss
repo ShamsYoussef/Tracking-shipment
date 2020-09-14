@@ -1,0 +1,10 @@
+@import './base/variables';
+
+.search-container {
+    background-color: $search-bc !important;
+    width           : 100%;
+    align-items     : flex-end;
+    display         : flex;
+    flex-direction  : column;
+    padding: 1rem;
+}
