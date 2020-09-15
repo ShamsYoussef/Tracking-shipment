@@ -1,57 +1,60 @@
 @import './base/variables';
 
 .navbar-container {
-    flex-direction: row-reverse;
-    border-bottom : 1px solid $border-color;
-    padding-left  : 3rem;
+	flex-direction: row-reverse;
+	border-bottom: 1px solid $border-color;
+	padding-left: 3rem;
 }
 
 @media (max-width: 900px) {
-    .logo {
-        padding-right: 0 !important;
-        margin-right : 0 !important;
-    }
+	.logo {
+		padding-right: 0 !important;
+		margin-right: 0 !important;
+	}
 
-    Nav:nth-child() {
-        border-bottom: 1px solid red !important;
-    }
+	Nav:nth-child() {
+		border-bottom: 1px solid red !important;
+	}
 }
 
 .navbar-toggler {
-    border: none;
+	border: none;
 }
 
 .nav-link {
-    color        : #000 !important;
-    font-weight  : 700 !important;
-    padding-right: 2rem !important;
+	color: #000 !important;
+	font-weight: 700 !important;
+	padding-right: 2rem !important;
 }
 
-
 .translate {
-    color: $red-color !important;
+	color: $red-color !important;
 }
 
 .dropdown-toggle::before {
-    display       : inline-block;
-    margin-left   : 0.255em;
-    vertical-align: middle;
-    margin-right  : 0.5em;
-    content       : "";
-    border-top    : 0.4em solid;
-    border-right  : 0.4em solid transparent;
-    border-bottom : 0;
-    border-left   : 0.4em solid transparent;
-    color         : $red-color;
+	display: inline-block;
+	margin-left: 0.255em;
+	vertical-align: middle;
+	margin-right: 0.5em;
+	content: '';
+	border-top: 0.4em solid;
+	border-right: 0.4em solid transparent;
+	border-bottom: 0;
+	border-left: 0.4em solid transparent;
+	color: $red-color;
 }
 
 .dropdown-toggle::after {
-    display: none;
+	display: none;
 }
 
 .dropdown-menu {
-    background-color: $search-bc;
-    padding         : 0px !important;
-    width           : max-content !important;
-    margin-top      : 1rem !important;
+	background-color: $search-bc;
+	padding: 0px !important;
+	width: max-content !important;
+	margin: 1rem auto !important;
+}
+
+.navbar-collapse {
+	text-align: center;
 }

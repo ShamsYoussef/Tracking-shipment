@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { sendTrackingNumber } from '../../store/actions/TrackOrderActions';
+import { useHistory } from 'react-router-dom';
 
 const Search = () => {
+	const history = useHistory();
+	const dispatch = useDispatch();
+
+	const [trackingNo, setTrackingNo] = useState('');
+	const search = () => {
+		dispatch(sendTrackingNumber(trackingNo));
+		history.push('/track');
+	};
+
 	return (
 		<div className='search-container'>
 			<div className='search-header'>تتبع شحنتك</div>
 			<div className='search-label'>ادخل رقم الشحنة و تابع شحنتك أول بأول</div>
 
 			<div className='form-container'>
-				<button id='submit-button' type='submit'>
-					<i class='fa fa-search'></i>
+				<button id='submit-button' onClick={search}>
+					<i className='fa fa-search'></i>
 				</button>
 				<input
+					onChange={val => setTrackingNo(val.target.value)}
 					type='text'
-					class='pop_text'
 					placeholder='رقم الشحنة'
 					id='track-number'
 					name='track_number'
