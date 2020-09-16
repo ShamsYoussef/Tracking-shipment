@@ -34,7 +34,7 @@ const OrderReceipt = () => {
 					</Col>
 				</Row>
 			</Container>
-			<Container style={{ direction: 'rtl' }} className='lower-section'>
+			<Container className='lower-section progressBar'>
 				<ProgressSteper></ProgressSteper>
 			</Container>
 		</div>

@@ -6,12 +6,12 @@ import PackageAddress from './PackageAddress';
 
 const PackageDetails = () => {
 	return (
-		<Container className='mt-4' style={{ direction: 'rtl' }}>
+		<Container className='mt-4 mb-5' style={{ direction: 'rtl' }}>
 			<Row>
-				<Col>
+				<Col md={8}>
 					<PackageTable></PackageTable>
 				</Col>
-				<Col>
+				<Col md={4}>
 					<PackageAddress></PackageAddress>
 				</Col>
 			</Row>

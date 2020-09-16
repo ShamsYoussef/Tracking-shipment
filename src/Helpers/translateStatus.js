@@ -16,14 +16,14 @@ const translateStatus = currentState => {
 			en: 'OUT_FOR_DELIVERY',
 			ar: 'الشحنة خرجت للتسليم',
 			color: 'green',
-			progress: 75,
+			progress: 66,
 		},
 
 		{
 			en: 'WAITING_FOR_CUSTOMER_ACTION',
 			ar: 'لم يتم التسليم',
 			color: 'yellow',
-			progress: 75,
+			progress: 66,
 			reason: 'تأجيل - العميل طلب التاجيل ليوم اخر',
 		},
 
@@ -37,7 +37,7 @@ const translateStatus = currentState => {
 			en: 'DELIVERED_TO_SENDER',
 			ar: 'تم إرجعاها للتاجر',
 			color: 'red',
-			progress: 0,
+			progress: 66,
 		},
 	];
 

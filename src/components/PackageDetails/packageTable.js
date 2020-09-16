@@ -7,7 +7,7 @@ const PackageTable = () => {
 	const trackedOrder = useSelector(state => state.TrackOrder.trackedOrder);
 	return (
 		<div>
-			<p>تفاصيل الشحنة</p>
+			<p className='headerLabel'>تفاصيل الشحنة</p>
 			<Table responsive>
 				<thead>
 					<tr>
