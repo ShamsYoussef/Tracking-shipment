@@ -13,7 +13,5 @@ axios = Axios.create({
 });
 
 export const TrackShipment = trackingNo => {
-	return axios.get(
-		`track/${trackingNo}`
-	);
+	return axios.get(`track/${trackingNo}`);
 };

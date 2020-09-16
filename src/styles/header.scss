@@ -1,9 +1,11 @@
 @import './base/variables';
 
 .navbar-container {
-	flex-direction: row-reverse;
+	// flex-direction: row-reverse;
 	border-bottom: 1px solid $border-color;
 	padding-left: 3rem;
+	direction: rtl;
+	background-color: #fff;
 }
 
 @media (max-width: 900px) {
@@ -31,21 +33,12 @@
 	color: $red-color !important;
 }
 
-.dropdown-toggle::before {
-	display: inline-block;
-	margin-left: 0.255em;
-	vertical-align: middle;
+.dropdown-toggle::after {
 	margin-right: 0.5em;
-	content: '';
 	border-top: 0.4em solid;
 	border-right: 0.4em solid transparent;
-	border-bottom: 0;
 	border-left: 0.4em solid transparent;
 	color: $red-color;
-}
-
-.dropdown-toggle::after {
-	display: none;
 }
 
 .dropdown-menu {

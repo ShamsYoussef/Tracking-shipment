@@ -1,4 +1,4 @@
-import { LOGIN_SUCCESS, SEND_TRACKING_NUMBER } from '../actions/types';
+import { FETCH_TRACKED_ORDER, SEND_TRACKING_NUMBER } from '../actions/types';
 
 const initialState = {
 	trackedOrder: [],
@@ -7,9 +7,10 @@ const initialState = {
 
 const TrackOrderReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case LOGIN_SUCCESS:
+		case FETCH_TRACKED_ORDER:
 			return {
 				...state,
+				trackedOrder: action.trackedOrder,
 			};
 
 		case SEND_TRACKING_NUMBER:

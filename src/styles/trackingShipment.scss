@@ -1,0 +1,19 @@
+.text-danger {
+	color: #ff0000 !important;
+	margin: 0.5rem !important;
+}
+
+.loading-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin-top: 20%;
+}
+
+.track-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}

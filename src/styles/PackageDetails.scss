@@ -1,0 +1,21 @@
+.table-responsive {
+	border: 1px solid rgba(0, 0, 0, 0.062) !important;
+	border-radius: 10px !important;
+}
+
+thead {
+	background-color: rgba(184, 179, 179, 0.08);
+}
+
+tr th {
+	color: gray;
+	font-weight: 700;
+}
+
+tr td {
+	color: #53616f;
+}
+
+.table th {
+	border-top: none;
+}

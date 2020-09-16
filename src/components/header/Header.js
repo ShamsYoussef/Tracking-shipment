@@ -18,18 +18,18 @@ const Header = () => {
 			<Navbar.Toggle aria-controls='basic-navbar-nav' className='p-0' />
 			<Navbar.Collapse id='basic-navbar-nav'>
 				<Nav className='mr-auto'>
-					<Nav.Link href='#home' className='translate'>
-						ENG
-					</Nav.Link>
-					<Nav.Link href='#home'>تسجيل الدخول</Nav.Link>
+					<Nav.Link href='#home'>الرئيسية</Nav.Link>
+					<Nav.Link href='#home'>الأسعار</Nav.Link>
+					<Nav.Link href='#home'>كلم المبيعات</Nav.Link>
+				</Nav>
+				<Nav className='mr-auto'>
 					<NavDropdown title='تتبع شحنتك' id='basic-nav-dropdown'>
 						<Search></Search>
 					</NavDropdown>
-				</Nav>
-				<Nav className='mr-auto'>
-					<Nav.Link href='#home'>كلم المبيعات</Nav.Link>
-					<Nav.Link href='#home'>الأسعار</Nav.Link>
-					<Nav.Link href='#home'>الرئيسية</Nav.Link>
+					<Nav.Link href='#home'>تسجيل الدخول</Nav.Link>
+					<Nav.Link href='#home' className='translate'>
+						ENG
+					</Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>
