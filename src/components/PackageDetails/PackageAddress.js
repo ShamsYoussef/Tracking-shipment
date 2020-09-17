@@ -1,6 +1,4 @@
 import React from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
 
 import supportImage from '../../assets/support.jpg';
 

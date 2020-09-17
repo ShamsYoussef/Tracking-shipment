@@ -2,55 +2,59 @@
 
 .search-container {
 	background-color: $search-bc !important;
-	width: 100%;
-	align-items: flex-end;
-	display: flex;
-	flex-direction: column;
-	padding: 1rem;
-	direction: ltr;
+	width           : 100%;
+	align-items     : flex-end;
+	display         : flex;
+	flex-direction  : column;
+	padding         : 1rem;
+	direction       : ltr;
 }
 
 .search-header {
-	color: $red-color;
-	font-size: 1.5rem;
-	font-weight: 700;
+	color        : $red-color;
+	font-size    : 1.5rem;
+	font-weight  : 700;
 	margin-bottom: 1rem;
 }
 
+#submit-button:disabled {
+	background-color: rgba(255, 0, 0, 0.301);
+}
+
 .search-label {
-	font-size: 1rem;
-	font-family: 'Arial', Helvetica, Arial, Lucida, sans-serif;
-	font-weight: 700;
-	color: #5e5e5e;
+	font-size    : 1rem;
+	font-family  : 'Arial', Helvetica, Arial, Lucida, sans-serif;
+	font-weight  : 700;
+	color        : #5e5e5e;
 	margin-bottom: 1.5rem;
 }
 
 #track-number {
-	border: 1px solid #e3e7ec;
-	height: 36px;
+	border       : 1px solid #e3e7ec;
+	height       : 36px;
 	border-radius: 5px;
-	padding: 5px 10px;
-	width: 240px;
-	font-family: Roboto, Helvetica, Arial, Lucida, sans-serif;
-	color: #979797;
-	text-align: right;
+	padding      : 5px 10px;
+	width        : 240px;
+	font-family  : Roboto, Helvetica, Arial, Lucida, sans-serif;
+	color        : #979797;
+	text-align   : right;
 }
 
 #submit-button {
-	height: 34px;
-	background: $red-color;
-	border: none;
-	width: 34px;
-	border-radius: 50px;
-	color: #fff;
-	font-size: 14px;
-	margin-left: 10px;
-	margin-right: 10px;
+	height          : 34px;
+	background-color: $red-color;
+	border          : none;
+	width           : 34px;
+	border-radius   : 50px;
+	color           : #fff;
+	font-size       : 14px;
+	margin-left     : 10px;
+	margin-right    : 10px;
 }
 
 .form-container {
 	justify-content: center;
-	align-items: center;
-	display: flex;
-	margin-bottom: 1rem;
+	align-items    : center;
+	display        : flex;
+	margin-bottom  : 1rem;
 }

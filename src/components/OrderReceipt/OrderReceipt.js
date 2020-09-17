@@ -12,7 +12,11 @@ const OrderReceipt = () => {
 						<p>
 							رقم الشحنة <span> {trackedOrder.trackingNumber}</span>
 						</p>
-						<p className='label'>تم تسليم الشحنة </p>
+						<p
+							className='label'
+							style={{ color: trackedOrder.currentStatus.color }}>
+							{trackedOrder.currentStatus.ar}{' '}
+						</p>
 					</Col>
 					<Col>
 						<p>أخر تحديث</p>
@@ -35,6 +39,17 @@ const OrderReceipt = () => {
 				</Row>
 			</Container>
 			<Container className='lower-section progressBar'>
+				<div className='statuses-container'>
+					<div>تم إنشاء الشحنة</div>
+					<div>تم استلام الشحنة من التاجر</div>
+					<div className='out-for-delivery'>
+						<div>الشحنة خرجت للتسليم</div>
+						<div style={{ color: trackedOrder.currentStatus.color }}>
+							{trackedOrder.currentStatus.reason}
+						</div>
+					</div>
+					<div>تم التسليم</div>
+				</div>
 				<ProgressSteper></ProgressSteper>
 			</Container>
 		</div>

@@ -11,6 +11,7 @@ const Search = () => {
 	const search = () => {
 		dispatch(sendTrackingNumber(trackingNo));
 		history.push('/track');
+		setTrackingNo('');
 	};
 
 	return (
@@ -19,11 +20,15 @@ const Search = () => {
 			<div className='search-label'>ادخل رقم الشحنة و تابع شحنتك أول بأول</div>
 
 			<div className='form-container'>
-				<button id='submit-button' onClick={search}>
+				<button
+					id='submit-button'
+					onClick={search}
+					disabled={trackingNo === ''}>
 					<i className='fa fa-search'></i>
 				</button>
 				<input
 					onChange={val => setTrackingNo(val.target.value)}
+					value={trackingNo}
 					type='text'
 					placeholder='رقم الشحنة'
 					id='track-number'

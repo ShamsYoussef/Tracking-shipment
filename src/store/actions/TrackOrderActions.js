@@ -41,7 +41,7 @@ export const trackOrder = trackingNo => {
 					day: moment(dataDetails.PromisedDate).format('DD'),
 				},
 
-				dataDetails.CurrentStatus.state,
+				translateStatus(dataDetails.CurrentStatus.state),
 				{
 					date: moment(dataDetails.CurrentStatus.timestamp).format(
 						'YYYY-MM-DD'

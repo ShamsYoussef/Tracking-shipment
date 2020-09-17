@@ -11,19 +11,21 @@ const translateStatus = currentState => {
 			ar: 'تم استلام الشحنة من التاجر',
 			color: 'green',
 			progress: 25,
+			reason: '',
 		},
 		{
 			en: 'OUT_FOR_DELIVERY',
 			ar: 'الشحنة خرجت للتسليم',
 			color: 'green',
-			progress: 66,
+			progress: 65,
+			reason: '',
 		},
 
 		{
 			en: 'WAITING_FOR_CUSTOMER_ACTION',
 			ar: 'لم يتم التسليم',
-			color: 'yellow',
-			progress: 66,
+			color: '#ffc107',
+			progress: 65,
 			reason: 'تأجيل - العميل طلب التاجيل ليوم اخر',
 		},
 
@@ -32,12 +34,14 @@ const translateStatus = currentState => {
 			ar: 'تم تسليم الشحنة',
 			color: 'green',
 			progress: 100,
+			reason: '',
 		},
 		{
 			en: 'DELIVERED_TO_SENDER',
 			ar: 'تم إرجعاها للتاجر',
 			color: 'red',
-			progress: 66,
+			progress: 65,
+			reason: 'تم إلغاء الشحنة من التاجر',
 		},
 	];
 

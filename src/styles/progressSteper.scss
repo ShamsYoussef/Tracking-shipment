@@ -1,24 +1,24 @@
 .lower-section {
-	display: flex;
+	display        : flex;
 	justify-content: center;
-	align-items: center;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+	align-items    : center;
+	margin-top     : 2rem;
+	margin-bottom  : 1rem;
+	flex-direction : column;
 }
 
 .fa.fa-floppy-o,
 .fa.fa-truck,
-.fa.fa-check {
-	font-size: larger;
-	padding: 16px;
-	transform: rotate(180deg);
+.fa.fa-check,
+.fa-inbox {
+	font-size       : larger;
+	padding         : 16px;
+	transform       : rotate(180deg);
 	background-color: lightgrey;
-	color: white;
+	color           : white;
 }
-hr.solid {
-	border-top: 2px solid rgb(235, 232, 232);
-	width: 100%;
-}
+
+
 .fa.fa-check {
 	padding: 3px;
 }
@@ -26,6 +26,7 @@ hr.solid {
 .step.column {
 	transform: rotate(180deg);
 }
+
 .progressBar {
 	transform: rotate(180deg);
 }

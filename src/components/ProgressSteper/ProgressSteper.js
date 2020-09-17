@@ -10,6 +10,7 @@ const ProgressSteper = () => {
 	const [progress, setProgress] = useState(0);
 	const [color, setColor] = useState('');
 
+
 	useEffect(() => {
 		trackedOrder.transitEvents.map(row => {
 			setProgress(row.state.progress);
@@ -22,6 +23,7 @@ const ProgressSteper = () => {
 			percent={progress}
 			filledBackground={color}
 			width='90%'>
+			{/* Delivered step */}
 			<Step transition='scale'>
 				{({ accomplished }) =>
 					accomplished ? (
@@ -66,7 +68,7 @@ const ProgressSteper = () => {
 							className='fa fa-check rounded-circle'
 						/>
 					) : (
-						<i className='fa fa-floppy-o rounded-circle' />
+						<i className='fa fa-inbox rounded-circle' aria-hidden='true'></i>
 					)
 				}
 			</Step>

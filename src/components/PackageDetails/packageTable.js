@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Table } from 'react-bootstrap';
 
@@ -20,10 +19,19 @@ const PackageTable = () => {
 				<tbody>
 					{trackedOrder.transitEvents.map(row => (
 						<tr>
-							<td>المعادي</td>
+							<td>مدينه نصر </td>
 							<td>{row.date}</td>
 							<td style={{ direction: 'ltr' }}>{row.time}</td>
-							<td>{row.state.ar}</td>
+							<td>
+								<div>{row.state.ar}</div>
+								<div
+									style={{
+										color: row.state.color,
+										fontSize: '0.8rem',
+									}}>
+									{row.state.reason}
+								</div>
+							</td>
 						</tr>
 					))}
 				</tbody>
