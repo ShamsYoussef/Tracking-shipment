@@ -11,7 +11,6 @@ export const trackOrder = trackingNo => {
 		try {
 			const response = await TrackShipment(trackingNo);
 			const dataDetails = response.data;
-			console.log('dataDetails', dataDetails);
 			const events = [];
 
 			dataDetails.TransitEvents.map(status => {
@@ -30,7 +29,6 @@ export const trackOrder = trackingNo => {
 						hub: status.hub,
 					});
 				}
-				console.log('status', status);
 			});
 
 			const loadedTrackedOrder = new TrackedOrder(
@@ -54,7 +52,6 @@ export const trackOrder = trackingNo => {
 				events
 			);
 
-			console.log('loadedTrackedOrder', loadedTrackedOrder);
 			if (response.status !== 200) {
 				throw new Error('Something went wrong!');
 			}
@@ -64,7 +61,6 @@ export const trackOrder = trackingNo => {
 				trackedOrder: loadedTrackedOrder,
 			});
 		} catch (err) {
-			console.log('error', err);
 			throw err;
 		}
 	};

@@ -1,5 +1,4 @@
 const convertDay = currentDay => {
-	console.log('currentDayyyyyyyyy', currentDay);
 	const days = [
 		'السبت',
 		'الأحد',

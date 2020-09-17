@@ -5,7 +5,7 @@ const API_URL = config.API_URL;
 let axios;
 
 axios = Axios.create({
-	baseURL: `${API_URL}/shipments/`,
+	baseURL: `${API_URL}`,
 	headers: {
 		responseType: 'json',
 		'Access-Control-Allow-Origin': '*',
@@ -13,5 +13,5 @@ axios = Axios.create({
 });
 
 export const TrackShipment = trackingNo => {
-	return axios.get(`track/${trackingNo}`);
+	return axios.get(`/shipments/track/${trackingNo}`);
 };

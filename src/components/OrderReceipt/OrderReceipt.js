@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import ProgressSteper from '../ProgressSteper/ProgressSteper';
+
 const OrderReceipt = () => {
 	const trackedOrder = useSelector(state => state.TrackOrder.trackedOrder);
 	return (

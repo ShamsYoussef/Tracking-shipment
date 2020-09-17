@@ -8,18 +8,20 @@ import qs from 'qs';
 import { useHistory } from 'react-router-dom';
 
 import Error from '../Error/Error';
+
+// to get tracking number from url params
 const TrackingShipment = props => {
 	const trackingNumber = qs.parse(props.location.search, {
 		ignoreQueryPrefix: true,
 	}).trackNo;
 
-	console.log('trackingNumber', trackingNumber);
 	const history = useHistory();
 	const [isLoading, setIsLoading] = useState(false);
 	const trackedOrder = useSelector(state => state.TrackOrder.trackedOrder);
 
 	const [error, setError] = useState('');
 	const dispatch = useDispatch();
+
 	////////////// load tracked order ////////////////
 	const fetchOrderDetails = async () => {
 		setError('');
@@ -46,11 +48,13 @@ const TrackingShipment = props => {
 		}
 	}, [trackingNumber, dispatch]);
 
+	/////// if fetch order still loading/////////
 	if (isLoading) {
 		return <Loading></Loading>;
 	}
+
+	///////if error catched /////////
 	if (error !== '') {
-		console.log('errrrrrrr', error);
 		return (
 			<div className='error-parent'>
 				<Error error={error} trackingNumber={trackingNumber}></Error>
@@ -58,6 +62,7 @@ const TrackingShipment = props => {
 		);
 	}
 
+	///////if not loading and data found /////////
 	if (!isLoading && trackedOrder.length !== 0) {
 		return (
 			<div className='track-container'>
