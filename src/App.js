@@ -13,12 +13,8 @@ function App() {
 			<Router>
 				<Header> </Header>
 				<Switch>
-					<Route path='/track'>
-						<TrackingShipment />
-					</Route>
-					<Route path='/'>
-						<Home />
-					</Route>
+					<Route path='/track' component={TrackingShipment}></Route>
+					<Route path='/' component={Home}></Route>
 				</Switch>
 			</Router>
 		</Provider>

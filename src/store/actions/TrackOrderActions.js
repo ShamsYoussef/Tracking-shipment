@@ -27,7 +27,7 @@ export const trackOrder = trackingNo => {
 						state: translateStatus(status.state),
 						date: moment(status.timestamp).format('YYYY-MM-DD'),
 						time: moment(status.timestamp).format('h:mm a'),
-						hub: status.hub || '',
+						hub: status.hub,
 					});
 				}
 				console.log('status', status);

@@ -10,7 +10,6 @@ const ProgressSteper = () => {
 	const [progress, setProgress] = useState(0);
 	const [color, setColor] = useState('');
 
-
 	useEffect(() => {
 		trackedOrder.transitEvents.map(row => {
 			setProgress(row.state.progress);

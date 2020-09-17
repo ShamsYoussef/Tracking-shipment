@@ -4,18 +4,22 @@ import { trackOrder } from '../../store/actions/TrackOrderActions';
 import Loading from '../Loading/Loading';
 import OrderReceipt from '../OrderReceipt/OrderReceipt';
 import PackageDetails from '../PackageDetails/PackageDetails';
+import qs from 'qs';
 import { useHistory } from 'react-router-dom';
 
 import Error from '../Error/Error';
-const TrackingShipment = () => {
-	const [isLoading, setIsLoading] = useState(false);
-	const trackingNumber = useSelector(state => state.TrackOrder.trackingNumber);
-	const trackedOrder = useSelector(state => state.TrackOrder.trackedOrder);
+const TrackingShipment = props => {
+	const trackingNumber = qs.parse(props.location.search, {
+		ignoreQueryPrefix: true,
+	}).trackNo;
+
+	console.log('trackingNumber', trackingNumber);
 	const history = useHistory();
+	const [isLoading, setIsLoading] = useState(false);
+	const trackedOrder = useSelector(state => state.TrackOrder.trackedOrder);
 
 	const [error, setError] = useState('');
 	const dispatch = useDispatch();
-
 	////////////// load tracked order ////////////////
 	const fetchOrderDetails = async () => {
 		setError('');
@@ -49,7 +53,7 @@ const TrackingShipment = () => {
 		console.log('errrrrrrr', error);
 		return (
 			<div className='error-parent'>
-				<Error error={error}></Error>
+				<Error error={error} trackingNumber={trackingNumber}></Error>
 			</div>
 		);
 	}

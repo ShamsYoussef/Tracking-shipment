@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Table } from 'react-bootstrap';
-
+import translateHub from '../../Helpers/translateHub';
 const PackageTable = () => {
 	const trackedOrder = useSelector(state => state.TrackOrder.trackedOrder);
 	return (
@@ -19,7 +19,9 @@ const PackageTable = () => {
 				<tbody>
 					{trackedOrder.transitEvents.map(row => (
 						<tr>
-							<td>مدينه نصر </td>
+							<td>
+								{!row.hub || row.hub === '' ? '-' : translateHub(row.hub)}
+							</td>
 							<td>{row.date}</td>
 							<td style={{ direction: 'ltr' }}>{row.time}</td>
 							<td>

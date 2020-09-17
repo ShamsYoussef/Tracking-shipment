@@ -7,8 +7,8 @@ const OrderReceipt = () => {
 	return (
 		<div className='receipt-container '>
 			<Container className='upper-section'>
-				<Row className='mt-3' style={{ direction: 'rtl' }}>
-					<Col>
+				<Row className='mt-3' style={{ direction: 'rtl', textAlign: 'right' }}>
+					<Col md={3} xs={6}>
 						<p>
 							رقم الشحنة <span> {trackedOrder.trackingNumber}</span>
 						</p>
@@ -18,18 +18,18 @@ const OrderReceipt = () => {
 							{trackedOrder.currentStatus.ar}{' '}
 						</p>
 					</Col>
-					<Col>
+					<Col md={3} xs={6}>
 						<p>أخر تحديث</p>
 						<p className='label'>
 							{trackedOrder.lastUpdated.day} | {trackedOrder.lastUpdated.date} |{' '}
 							{trackedOrder.lastUpdated.time}
 						</p>
 					</Col>
-					<Col>
+					<Col md={3} xs={6}>
 						<p>اسم التاجر</p>
 						<p className='label'>SOUQ.com</p>
 					</Col>
-					<Col>
+					<Col md={3} xs={6}>
 						<p>موعد التسليم خلال</p>
 						<p className='label'>
 							{trackedOrder.promisedDate.day} {trackedOrder.promisedDate.month}{' '}

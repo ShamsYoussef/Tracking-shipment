@@ -7,7 +7,7 @@ import logo from '../../assets/logoArbic.svg';
 const Header = () => {
 	return (
 		<Navbar expand='lg' sticky='top' className='navbar-container'>
-			<Navbar.Brand className='logo' href=''>
+			<Navbar.Brand className='logo' href='/'>
 				<img
 					src={logo}
 					width='140'
@@ -18,7 +18,7 @@ const Header = () => {
 			<Navbar.Toggle aria-controls='basic-navbar-nav' className='p-0' />
 			<Navbar.Collapse id='basic-navbar-nav'>
 				<Nav className='mr-auto'>
-					<Nav.Link href='#home'>الرئيسية</Nav.Link>
+					<Nav.Link href='/'>الرئيسية</Nav.Link>
 					<Nav.Link href='#home'>الأسعار</Nav.Link>
 					<Nav.Link href='#home'>كلم المبيعات</Nav.Link>
 				</Nav>

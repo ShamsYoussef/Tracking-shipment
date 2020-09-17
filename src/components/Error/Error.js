@@ -1,9 +1,6 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 
-const Error = ({ error }) => {
-	const trackingNumber = useSelector(state => state.TrackOrder.trackingNumber);
-
+const Error = ({ error, trackingNumber }) => {
 	return (
 		<div className='error-container'>
 			<i className='fa fa-exclamation-circle'></i>
